@@ -10,6 +10,10 @@ def higher_lower_game():
         if guess.lower() == "quit":
             print(f"The number was {target_number}! Thanks for playing!")
             return
+
+        if not guess.isdigit():
+            print("Please enter a valid number.")
+            continue
         
         guess = int(guess)
         attempts += 1
